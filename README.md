@@ -27,42 +27,41 @@ Proyek ini dikembangkan sebagai bagian dari laporan percobaan akademik dan dituj
 ## 🗂️ Struktur Proyek
 """
 .
-├── teyvatLontar.py
-│ └── Script utama antarmuka Streamlit (UI & pipeline utama)
-│
-├── preprocess.py
-│ └── Modul pre-processing citra (grayscale, median blur, CLAHE, dll.)
-│
-├── majorLinesAksara.py
-│ └── Implementasi algoritma Major Line untuk menentukan baris utama
-│ dan urutan pembacaan karakter
-│
-├── rukeAksara.py
-│ └── Script komposisi aksara Bali ke teks Latin berbasis rule-based
-│
-├── phonologyRulesAksara.yaml
-│ └── Konfigurasi aturan fonologi dan spasial aksara Bali
-│
-├── debugSpatial.py
-│ └── Script khusus untuk debugging posisi spasial karakter
-│ dan visualisasi relasi antar aksara
-│
-├── segmentasiKataGreedy.py
-│ └── Implementasi segmentasi kata Bahasa Bali menggunakan
-│ algoritma greedy longest-match (belum terintegrasi ke Streamlit)
-│
-├── bahasaBaliDict.csv
-│ └── Kamus Bahasa Bali untuk keperluan segmentasi greedy
-│
-├── testLSTM.py
-│ └── Script pengujian model LSTM untuk segmentasi kata
-│
-├── datasetLSTM/
-│ └── vocabulary_clean.json
-│ └── Vocabulary hasil preprocessing dataset LSTM
-│
-└── README.md
-"""
+<br>├── teyvatLontar.py
+<br>│ └── Script utama antarmuka Streamlit (UI & pipeline utama).
+<br>│
+<br>├── preprocess.py
+<br>│ └── Modul pre-processing citra (grayscale, median blur, CLAHE, dll.)
+<br>│
+<br>├── majorLinesAksara.py
+<br>│ └── Implementasi algoritma Major Line untuk menentukan baris utama
+<br>│ dan urutan pembacaan karakter
+<br>│
+<br>├── rukeAksara.py
+<br>│ └── Script komposisi aksara Bali ke teks Latin berbasis rule-based
+<br>│
+<br>├── phonologyRulesAksara.yaml
+<br>│ └── Konfigurasi aturan fonologi dan spasial aksara Bali
+<br>│
+<br>├── debugSpatial.py
+<br>│ └── Script khusus untuk debugging posisi spasial karakter
+<br>│ dan visualisasi relasi antar aksara
+<br>│
+<br>├── segmentasiKataGreedy.py
+<br>│ └── Implementasi segmentasi kata Bahasa Bali menggunakan
+<br>│ algoritma greedy longest-match (belum terintegrasi ke Streamlit)
+<br>│
+<br>├── bahasaBaliDict.csv
+<br>│ └── Kamus Bahasa Bali untuk keperluan segmentasi greedy
+<br>│
+<br>├── testLSTM.py
+<br>│ └── Script pengujian model LSTM untuk segmentasi kata
+<br>│
+<br>├── datasetLSTM/
+<br>│ └── vocabulary_clean.json
+<br>│ └── Vocabulary hasil preprocessing dataset LSTM
+<br>│
+<br>└── README.md
 
 ---
 
