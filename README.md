@@ -25,6 +25,7 @@ Proyek ini dikembangkan sebagai bagian dari laporan percobaan akademik dan dituj
 ---
 
 ## 🗂️ Struktur Proyek
+"""
 .
 ├── teyvatLontar.py
 │ └── Script utama antarmuka Streamlit (UI & pipeline utama)
@@ -61,7 +62,7 @@ Proyek ini dikembangkan sebagai bagian dari laporan percobaan akademik dan dituj
 │ └── Vocabulary hasil preprocessing dataset LSTM
 │
 └── README.md
-
+"""
 
 ---
 
