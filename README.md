@@ -33,8 +33,7 @@ Proyek ini dikembangkan sebagai bagian dari laporan percobaan akademik dan dituj
 <br>│ └── Modul pre-processing citra (grayscale, median blur, CLAHE, dll.)
 <br>│
 <br>├── majorLinesAksara.py
-<br>│ └── Implementasi algoritma Major Line untuk menentukan baris utama
-<br>│ dan urutan pembacaan karakter
+<br>│ └── Implementasi algoritma Major Line untuk menentukan baris utama dan urutan pembacaan karakter 
 <br>│
 <br>├── rukeAksara.py
 <br>│ └── Script komposisi aksara Bali ke teks Latin berbasis rule-based
@@ -43,18 +42,16 @@ Proyek ini dikembangkan sebagai bagian dari laporan percobaan akademik dan dituj
 <br>│ └── Konfigurasi aturan fonologi dan spasial aksara Bali
 <br>│
 <br>├── debugSpatial.py
-<br>│ └── Script khusus untuk debugging posisi spasial karakter
-<br>│ dan visualisasi relasi antar aksara
+<br>│ └── Script khusus untuk debugging posisi spasial karakter dan visualisasi relasi antar aksara
 <br>│
 <br>├── segmentasiKataGreedy.py
-<br>│ └── Implementasi segmentasi kata Bahasa Bali menggunakan
-<br>│ algoritma greedy longest-match (belum terintegrasi ke Streamlit)
+<br>│ └── Implementasi segmentasi kata Bahasa Bali menggunakan algoritma greedy longest-match (belum terintegrasi ke Streamlit)
 <br>│
 <br>├── bahasaBaliDict.csv
 <br>│ └── Kamus Bahasa Bali untuk keperluan segmentasi greedy
 <br>│
-<br>├── testLSTM.py
-<br>│ └── Script pengujian model LSTM untuk segmentasi kata
+<br>├── testLSTM.py 
+<br>│ └── Script pengujian model LSTM untuk segmentasi kata (belum terintegrasi ke Streamlit)
 <br>│
 <br>├── datasetLSTM/
 <br>│ └── vocabulary_clean.json
