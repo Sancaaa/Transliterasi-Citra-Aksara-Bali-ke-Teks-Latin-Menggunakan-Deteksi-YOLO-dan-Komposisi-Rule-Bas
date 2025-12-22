@@ -1,0 +1,2 @@
+# Transliterasi-Citra-Aksara-Bali-ke-Teks-Latin-Menggunakan-Deteksi-YOLO-dan-Komposisi-Rule-Bas
+SASKARA adalah sistem transliterasi citra Aksara Bali ke teks Latin yang mengombinasikan YOLO, algoritma major line untuk rekonstruksi urutan baca, serta komposisi rule-based. Sistem ini dilengkapi antarmuka Streamlit untuk eksperimen interaktif dan mendukung segmentasi kata menggunakan pendekatan greedy longest-match maupun LSTM (eksperimental).
