@@ -1,0 +1,479 @@
+# ===========================================
+# KONFIGURASI AKSARA BALI
+# ===========================================
+
+# ===========================================
+# EXISTING POSITION (Posisi yang memungkinkan)
+# ===========================================
+positions:
+  center: [0, 0]
+  top_left: [-1, -1]
+  top_center: [0, -1]
+  top_right: [1, -1]
+  center_left: [-1, 0]
+  center_right: [1, 0]
+  bottom_left: [-1, 1]
+  bottom_center: [0, 1]
+  bottom_right: [1, 1]
+
+# Pemetaan Class ID ke Nama Aksara
+# ===========================================
+# CLASS RULES (Mapping Posisi per Aksara)
+# ===========================================
+class_rules:
+  # ==========================
+  # AKSARA DASAR (Wianjana 0–17)
+  # ==========================
+  0:
+    name: ha
+    type: wianjana
+    value: ha
+    allowed_positions: ["center"]
+    priority: "center"
+  1:
+    name: na
+    type: wianjana
+    value: na
+    allowed_positions: ["center", "bottom_center"]
+    priority: "center"
+  2:
+    name: ca
+    type: wianjana
+    value: ca
+    allowed_positions: ["center"]
+    priority: "center"
+  3:
+    name: ra
+    type: wianjana
+    value: ra
+    allowed_positions: ["center"]
+    priority: "center"
+  4:
+    name: ka
+    type: wianjana
+    value: ka
+    allowed_positions: ["center"]
+    priority: "center"
+  5:
+    name: da
+    type: wianjana
+    value: da
+    allowed_positions: ["center"]
+    priority: "center"
+  6:
+    name: ta
+    type: wianjana
+    value: ta
+    allowed_positions: ["center"]
+    priority: "center"
+  7:
+    name: sa
+    type: wianjana
+    value: sa
+    allowed_positions: ["center"]
+    priority: "center"
+  8:
+    name: wa
+    type: wianjana
+    value: wa
+    allowed_positions: ["center"]
+    priority: "center"
+  9:
+    name: la
+    type: wianjana
+    value: la
+    allowed_positions: ["center"]
+    priority: "center"
+  10:
+    name: ma
+    type: wianjana
+    value: ma
+    allowed_positions: ["center"]
+    priority: "center"
+  11:
+    name: ga
+    type: wianjana
+    value: ga
+    allowed_positions: ["center"]
+    priority: "center"
+  12:
+    name: ba
+    type: wianjana
+    value: ba
+    allowed_positions: ["center"]
+    priority: center
+  13:
+    name: nga
+    type: wianjana
+    value: nga
+    allowed_positions: ["center"]
+    priority: center
+  14:
+    name: pa
+    type: wianjana
+    value: pa
+    allowed_positions: ["center"]
+    priority: center
+  15:
+    name: ja
+    type: wianjana
+    value: ja
+    allowed_positions: ["center"]
+    priority: center
+  16:
+    name: ya
+    type: wianjana
+    value: ya
+    allowed_positions: ["center"]
+    priority: center
+  17:
+    name: nya
+    type: wianjana
+    value: nya
+    allowed_positions: ["center"]
+    priority: center
+
+  # ==========================
+  # GANTUNGAN (18–34)
+  # ==========================
+  18:
+    name: gantungan_ha
+    type: gantungan
+    value: ha
+    allowed_positions: ["bottom_center"]
+    priority: "bottom_center"
+  19:
+    name: gantungan_na
+    type: gantungan
+    value: na
+    allowed_positions: ["bottom_center"]
+    priority: "bottom_center"
+  20:
+    name: gantungan_ca
+    type: gantungan
+    value: ca
+    allowed_positions: ["bottom_center"]
+    priority: "bottom_center"
+  21:
+    name: gantungan_ra
+    type: gantungan
+    value: ra
+    allowed_positions: ["bottom_center"]
+    priority: "bottom_center"
+  22:
+    name: gantungan_da
+    type: gantungan
+    value: da
+    allowed_positions: ["bottom_center"]
+    priority: "bottom_center"
+  23:
+    name: gantungan_ta
+    type: gantungan
+    value: ta
+    allowed_positions: ["bottom_center"]
+    priority: "bottom_center"
+  24:
+    name: gantungan_sa
+    type: gantungan
+    value: sa
+    allowed_positions: ["center_right", "bottom_right"]
+    priority: "bottom_right"
+  25:
+    name: gantungan_wa
+    type: gantungan
+    value: wa
+    allowed_positions: ["bottom_center"]
+    priority: "bottom_center"
+  26:
+    name: gantungan_la
+    type: gantungan
+    value: la
+    allowed_positions: ["bottom_center"]
+    priority: "bottom_center"
+  27:
+    name: gantungan_ma
+    type: gantungan
+    value: ma
+    allowed_positions: ["bottom_center"]
+    priority: "bottom_center"
+  28:
+    name: gantungan_ga
+    type: gantungan
+    value: ga
+    allowed_positions: ["bottom_center"]
+    priority: "bottom_center"
+  29:
+    name: gantungan_ba
+    type: gantungan
+    value: ba
+    allowed_positions: ["bottom_center"]
+    priority: "bottom_center"
+  30:
+    name: gantungan_nga
+    type: gantungan
+    value: nga
+    allowed_positions: ["bottom_center"]
+    priority: "bottom_center"
+  31:
+    name: gantungan_pa
+    type: gantungan
+    value: pa
+    allowed_positions: ["center_right"]
+    priority: "center_right"
+  32:
+    name: gantungan_ja
+    type: gantungan
+    value: ja
+    allowed_positions: ["bottom_center"]
+    priority: "bottom_center"
+  33:
+    name: gantungan_ya
+    type: gantungan
+    value: ya
+    allowed_positions: ["bottom_center", "bottom_right"]
+    priority: "bottom_center"
+  34:
+    name: gantungan_nya
+    type: gantungan
+    value: nya
+    allowed_positions: ["bottom_center"]
+    priority: "bottom_center"
+
+  # ==========================
+  # PENGANGGE SUARA / VOWEL MODIFIER (35–39)
+  # ==========================
+  35:
+    name: tedong
+    type: vowel_modifier
+    value: null
+    allowed_positions: ["center_right"]
+    priority: "center_right"
+    placement: after
+  36:
+    name: ulu
+    type: vowel_modifier
+    value: i
+    allowed_positions: ["top_center"]
+    priority: "top_center"
+    replaces: vowel
+  37:
+    name: suku
+    type: vowel_modifier
+    value: u
+    allowed_positions: ["bottom_center", "bottom_right"]
+    priority: "bottom_center"
+    replaces: vowel
+  38:
+    name: taleng
+    type: vowel_modifier
+    value: é
+    allowed_positions: ["center_left"]
+    priority: "center_left"
+    placement: before
+  39:
+    name: pepet
+    type: vowel_modifier
+    value: e
+    allowed_positions: ["top_center"]
+    priority: "top_center"
+    replaces: vowel
+
+  # ==========================
+  # PENGANGGE TENGENAN / AKHIRAN (40–43)
+  # ==========================
+  40:
+    name: cecek
+    type: consonant_ending
+    value: ng
+    allowed_positions: ["top_center", "top_right"]
+    priority: "top_center"
+  41:
+    name: surang
+    type: consonant_ending
+    value: r
+    allowed_positions: ["top_center", "top_right"]
+    priority: "top_center"
+  42:
+    name: bisah
+    type: consonant_ending
+    value: h
+    allowed_positions: ["center_right", "bottom_right"]
+    priority: "center_right"
+  43:
+    name: adeg-adeg
+    type: sound_killer
+    value: sound_killer
+    allowed_positions: ["center_right"]
+    priority: "center_right"
+    function: kill_vowel
+    vowels_to_remove: [a, i, u, e, o, é]
+
+  # ==========================
+  # LAINNYA / PUNCTUATION & SPESIAL (44–54)
+  # ==========================
+  44:
+    name: titik
+    type: punctuation
+    value: "."
+    allowed_positions: ["center_right"]
+    priority: "center_right"
+
+#  to do
+  45:
+    name: a_kara
+    type: reserved
+    value: reserved
+    allowed_positions: []
+    priority: "center"
+    status: "todo"
+  46:
+    name: i_kara
+    type: reserved
+    value: reserved
+    allowed_positions: []
+    priority: "center"
+    status: "todo"
+  47:
+    name: u_kara
+    type: reserved
+    value: reserved
+    allowed_positions: []
+    priority: "center"
+    status: "todo"
+  48:
+    name: sa_saga
+    type: reserved
+    value: reserved
+    allowed_positions: []
+    priority: "center"
+    status: "todo"
+  49:
+    name: na_rambat
+    type: reserved
+    value: reserved
+    allowed_positions: []
+    priority: "center"
+    status: "todo"
+  50:
+    name: da_madu
+    type: reserved
+    value: reserved
+    allowed_positions: []
+    priority: "center"
+    status: "todo"
+  51:
+    name: la_lengan
+    type: reserved
+    value: reserved
+    allowed_positions: []
+    priority: "center"
+    status: "todo"
+  52:
+    name: gantungan_da_madu
+    type: reserved
+    value: reserved
+    allowed_positions: []
+    priority: "center"
+    status: "todo"
+  53:
+    name: gantungan_ra_repa
+    type: reserved
+    value: reserved
+    allowed_positions: []
+    priority: "center"
+    status: "todo"
+  54:
+    name: gantungan_ta_tawa
+    type: reserved
+    value: reserved
+    allowed_positions: []
+    priority: "center"
+    status: "todo"
+
+class_mapping:
+  wianjana: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  gantungan: [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 52, 53, 54]
+  vowel_modifier: [35, 36, 37, 38, 39]
+  consonant_ending: [40, 41, 42]
+  sound_killer: [43]
+  punctuation: [44]
+  reserved: [45, 46, 47, 48, 49, 50, 51, 52, 53, 54]
+
+# ===========================================
+# THRESHOLD SPATIAL (Jarak untuk Scanning)
+# ===========================================
+spatial_thresholds:
+  # Untuk find_above() dan find_below()
+  vertical:
+    top_threshold: -0.12
+    bottom_threshold: 0.12
+
+  horizontal:
+    left_threshold: -0.3
+    right_threshold: 0.3
+
+  max_distance:
+    factor: 1.4
+    min_pixels: 7       # pixel
+
+# ===========================================
+# COMPOSITION
+# ===========================================
+composition:
+  order:
+    1: vowel_before
+    2: wianjana
+    3: gantungan
+    4: vowel_replace
+    5: consonant_ending
+    6: sound_killer
+    7: punctuation
+
+  special_combos:
+    taleng_tedong:
+      left: taleng
+      right: tedong
+      result:
+        type: vowel_modifier
+        value: o
+
+    na_to_gantungan_ka:
+      bottom: na
+      result:
+        type: gantungan
+        value: ka
+
+# ===========================================
+# PRIORITAS PEMILIHAN MODIFIER
+# ===========================================
+selection_priority:
+  description: "Jika ada banyak kandidat, pilih berdasarkan prioritas ini"
+  criteria:
+    1: distance  # Jarak terdekat (score terkecil)
+    2: role      # Role tertentu (vowel > gantungan > tengenan)
+    3: class_id  # Class ID tertentu jika masih ambiguous
+
+  max_per_category:
+    vowel_above: 1       # Maksimal 1 vowel atas
+    gantungan: 1         # Maksimal 1 gantungan
+    tengenan: 1          # Maksimal 1 tengenan
+
+    #  if vowel_above = 0
+    vowel_side_left: 1   # Maksimal 1 vowel kiri
+    vowel_side_right: 1  # Maksimal 1 vowel kanan
+
+    special: "unlimited"   # Bisa banyak
+
+# ===========================================
+# VALIDASI & ERROR HANDLING
+# ===========================================
+validation:
+  # Cek apakah modifier terlalu jauh
+  max_distance_multiplier: 3.0  # Maksimal 3x tinggi base
+
+  # Warning jika ada konflik
+  conflict_detection:
+    multiple_vowels_above: warn
+    multiple_gantungan: warn
+    check_incomplete_characters: warn
+    gantungan_without_wianjana: error
