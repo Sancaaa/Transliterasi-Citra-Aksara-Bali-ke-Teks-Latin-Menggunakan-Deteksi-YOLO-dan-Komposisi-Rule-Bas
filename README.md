@@ -1,129 +1,117 @@
-📜 SASKARA – Sistem Transliterasi Aksara Bali Berbasis Deteksi dan Rule-Based
+# 📜 SASKARA – Sistem Transliterasi Aksara Bali Berbasis Deteksi dan Rule-Based
 
 SASKARA merupakan proyek penelitian dan eksperimen yang bertujuan untuk melakukan transliterasi citra Aksara Bali ke teks Latin secara otomatis. Sistem ini dirancang untuk menangani kompleksitas aksara Bali yang bersifat dua dimensi dengan mengombinasikan pendekatan deep learning dan linguistic rule-based.
 
 Pipeline utama terdiri dari:
-
-Pre-processing citra
-
-Deteksi dan klasifikasi karakter menggunakan YOLO
-
-Penentuan urutan baca menggunakan algoritma Major Line
-
-Komposisi aksara ke suku kata Latin berbasis aturan fonologi
-
-Segmentasi kata (eksperimental)
+1. **Pre-processing citra**
+2. **Deteksi dan klasifikasi karakter** menggunakan YOLO
+3. **Penentuan urutan baca** menggunakan algoritma Major Line
+4. **Komposisi aksara ke suku kata Latin** berbasis aturan fonologi
+5. **Segmentasi kata** (eksperimental)
 
 Proyek ini dikembangkan sebagai bagian dari laporan percobaan akademik dan ditujukan untuk mendukung digitalisasi serta pelestarian aksara Bali.
 
-✨ Fitur Utama
+---
 
-🔍 Deteksi karakter Aksara Bali berbasis YOLO
+## ✨ Fitur Utama
 
-🧭 Rekonstruksi urutan baca dengan algoritma Major Line
+- 🔍 **Deteksi karakter Aksara Bali** berbasis YOLO
+- 🧭 **Rekonstruksi urutan baca** dengan algoritma Major Line
+- 🧩 **Komposisi fonologi aksara Bali ke Latin** berbasis rule-based
+- 🖥️ **Antarmuka interaktif** menggunakan Streamlit
+- ✂️ **Segmentasi kata Bahasa Bali** (greedy & LSTM – eksperimen)
+- 🧪 **Mode debugging spasial** untuk analisis hasil deteksi
 
-🧩 Komposisi fonologi aksara Bali ke Latin berbasis rule-based
+---
 
-🖥️ Antarmuka interaktif menggunakan Streamlit
-
-✂️ Segmentasi kata Bahasa Bali (greedy & LSTM – eksperimen)
-
-🧪 Mode debugging spasial untuk analisis hasil deteksi
-
-🗂️ Struktur Proyek
+## 🗂️ Struktur Proyek
 .
 ├── teyvatLontar.py
-│   Script utama antarmuka Streamlit (UI & pipeline utama)
+│ └── Script utama antarmuka Streamlit (UI & pipeline utama)
 │
 ├── preprocess.py
-│   Modul pre-processing citra (grayscale, median blur, CLAHE, dll.)
+│ └── Modul pre-processing citra (grayscale, median blur, CLAHE, dll.)
 │
 ├── majorLinesAksara.py
-│   Implementasi algoritma Major Line untuk menentukan baris utama
-│   dan urutan pembacaan karakter
+│ └── Implementasi algoritma Major Line untuk menentukan baris utama
+│ dan urutan pembacaan karakter
 │
 ├── rukeAksara.py
-│   Script komposisi aksara Bali ke teks Latin berbasis rule-based
+│ └── Script komposisi aksara Bali ke teks Latin berbasis rule-based
 │
 ├── phonologyRulesAksara.yaml
-│   Konfigurasi aturan fonologi dan spasial aksara Bali
+│ └── Konfigurasi aturan fonologi dan spasial aksara Bali
 │
 ├── debugSpatial.py
-│   Script khusus untuk debugging posisi spasial karakter
-│   dan visualisasi relasi antar aksara
+│ └── Script khusus untuk debugging posisi spasial karakter
+│ dan visualisasi relasi antar aksara
 │
 ├── segmentasiKataGreedy.py
-│   Implementasi segmentasi kata Bahasa Bali menggunakan
-│   algoritma greedy longest-match (belum terintegrasi ke Streamlit)
+│ └── Implementasi segmentasi kata Bahasa Bali menggunakan
+│ algoritma greedy longest-match (belum terintegrasi ke Streamlit)
 │
 ├── bahasaBaliDict.csv
-│   Kamus Bahasa Bali untuk keperluan segmentasi greedy
+│ └── Kamus Bahasa Bali untuk keperluan segmentasi greedy
 │
 ├── testLSTM.py
-│   Script pengujian model LSTM untuk segmentasi kata
+│ └── Script pengujian model LSTM untuk segmentasi kata
 │
 ├── datasetLSTM/
-│   └── vocabulary_clean.json
-│       Vocabulary hasil preprocessing dataset LSTM
+│ └── vocabulary_clean.json
+│ └── Vocabulary hasil preprocessing dataset LSTM
 │
 └── README.md
 
-⚙️ Alur Sistem (Pipeline Singkat)
 
-Input citra aksara Bali
+---
 
-Pre-processing untuk meningkatkan kualitas citra
+## ⚙️ Alur Sistem (Pipeline Singkat)
 
-YOLO mendeteksi dan mengklasifikasikan karakter
+1. **Input citra** aksara Bali
+2. **Pre-processing** untuk meningkatkan kualitas citra
+3. **YOLO** mendeteksi dan mengklasifikasikan karakter
+4. **Major Line Algorithm** menentukan baris utama dan urutan baca
+5. **Rule-Based Composition** menyusun aksara menjadi suku kata Latin
+6. **(Opsional) Segmentasi kata** untuk membentuk kata utuh
 
-Major Line Algorithm menentukan baris utama dan urutan baca
+---
 
-Rule-Based Composition menyusun aksara menjadi suku kata Latin
+## 🧠 Pendekatan yang Digunakan
 
-(Opsional) Segmentasi kata untuk membentuk kata utuh
-
-🧠 Pendekatan yang Digunakan
-Deteksi Karakter
-
+### Deteksi Karakter
 YOLO digunakan untuk mendeteksi dan mengklasifikasikan aksara dasar, sandhangan, dan tanda baca secara langsung dari citra.
 
-Major Line Algorithm
+### Major Line Algorithm
+Menentukan baris utama berdasarkan dominasi aksara wianjana. Digunakan untuk merekonstruksi urutan baca dari hasil object detection.
 
-Menentukan baris utama berdasarkan dominasi aksara wianjana.
+### Komposisi Rule-Based
+Aturan fonologi dan spasial didefinisikan dalam file YAML. Setiap aksara dasar diproses bersama modifier di sekitarnya (gantungan, vokal, tengenan).
 
-Digunakan untuk merekonstruksi urutan baca dari hasil object detection.
+### Segmentasi Kata (Eksperimental)
+- **Greedy Longest-Match** berbasis kamus Bahasa Bali.
+- **LSTM / BiLSTM** untuk eksperimen segmentasi berbasis pembelajaran sekuens.
 
-Komposisi Rule-Based
+---
 
-Aturan fonologi dan spasial didefinisikan dalam file YAML.
+## 🚧 Status Pengembangan
 
-Setiap aksara dasar diproses bersama modifier di sekitarnya (gantungan, vokal, tengenan).
+| Komponen | Status |
+|----------|---------|
+| ✅ Deteksi & komposisi rule-based | Stabil |
+| ✅ UI Streamlit | Aktif |
+| ⚠️ Segmentasi kata (greedy & LSTM) | Eksperimental |
+| 🔧 Integrasi penuh segmentasi ke UI | Belum diimplementasikan |
 
-Segmentasi Kata (Eksperimental)
+---
 
-Greedy Longest-Match berbasis kamus Bahasa Bali.
+## 📌 Catatan
 
-LSTM / BiLSTM untuk eksperimen segmentasi berbasis pembelajaran sekuens.
+- Proyek ini bersifat **eksperimental dan akademis**.
+- Aturan fonologi dapat diperluas dengan memodifikasi `phonologyRulesAksara.yaml`.
+- Performa sangat bergantung pada **kualitas deteksi karakter dari YOLO**.
 
-🚧 Status Pengembangan
+---
 
-✅ Deteksi & komposisi rule-based: stabil
+## 📖 Lisensi
 
-✅ UI Streamlit: aktif
-
-⚠️ Segmentasi kata (greedy & LSTM): eksperimental
-
-🔧 Integrasi penuh segmentasi ke UI: belum diimplementasikan
-
-📌 Catatan
-
-Proyek ini bersifat eksperimental dan akademis.
-
-Aturan fonologi dapat diperluas dengan memodifikasi phonologyRulesAksara.yaml.
-
-Performa sangat bergantung pada kualitas deteksi karakter dari YOLO.
-
-📖 Lisensi
-
-Proyek ini dikembangkan untuk keperluan pendidikan dan penelitian.
-Silakan gunakan, modifikasi, dan kembangkan dengan tetap mencantumkan atribusi.
+Proyek ini dikembangkan untuk keperluan pendidikan dan penelitian. Silakan gunakan, modifikasi, dan kembangkan dengan tetap mencantumkan atribusi.
