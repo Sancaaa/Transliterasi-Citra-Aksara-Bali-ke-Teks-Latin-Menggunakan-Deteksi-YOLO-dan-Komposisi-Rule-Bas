@@ -1,19 +1,3 @@
-#!/usr/bin/env python3
-"""
-Segmentasi Kata Bahasa Bali
-Script ini membaca input string (dari OCR Aksara Bali -> Latin) dan melakukan segmentasi
-berdasarkan kamus kata Bahasa Bali dengan algoritma greedy longest-match.
-
-Karakter khusus:
-- 'é' di-normalisasi ke 'e' untuk lookup, tapi dipertahankan di output
-- Titik (.) menempel ke kata sebelumnya
-- Karakter non-alphabet selain titik dihapus
-"""
-
-import csv
-import sys
-from typing import Dict, List, Tuple, Set
-
 # ==================== KONFIGURASI ====================
 
 # Max length per huruf (hardcoded berdasarkan analisis)

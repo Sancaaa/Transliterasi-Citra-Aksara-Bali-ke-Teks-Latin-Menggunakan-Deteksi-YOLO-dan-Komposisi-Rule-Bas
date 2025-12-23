@@ -1,0 +1,27 @@
+# === Virtual Environment ===
+venv/
+.env/
+.venv/
+
+# === Python Cache ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# === Dataset & Labels ===
+AksarBaliDatasets/
+DeepLontar/
+DeepLontar_Labels/
+
+# === Logs & Outputs ===
+runs/
+logs/
+output/
+results/
+
+# === System / Editor Files ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
