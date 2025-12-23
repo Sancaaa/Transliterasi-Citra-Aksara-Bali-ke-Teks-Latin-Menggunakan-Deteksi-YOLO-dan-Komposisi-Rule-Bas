@@ -57,6 +57,9 @@ Proyek ini dikembangkan sebagai bagian dari laporan percobaan akademik dan dituj
 <br>│ └── vocabulary_clean.json
 <br>│ └── Vocabulary hasil preprocessing dataset LSTM
 <br>│
+<br>├── requirements.txt/
+<br>│ └── Keseluruhan depedencies
+<br>│
 <br>└── README.md
 
 ---
